@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 using namespace std; 
 
 void Exchange(int*pa, int *pb);
@@ -6,8 +6,10 @@ void Exchange(int*pa, int *pb);
 void main()
 {
 	setlocale(LC_ALL, "");
+	
 	int a = 2, b = 3;
 	cout << a << "\t" << b << endl; 
+	cout << &a << "\t" << &b << endl; 
 	Exchange (&a, &b);
 	cout << a << "\t" << b << endl; 
 }
@@ -17,3 +19,21 @@ void Exchange (int *a, int *b)
 	*a = *b;
 	*b = buffer; 
 }
+
+// класcный вариант 
+//void Exchange(int* a, int* b);
+//
+//void main()
+//{
+//	setlocale(LC_ALL, "");
+//	int a = 2, b = 3;
+//	cout << a << "\t" << b << endl;
+//	Exchange(&a, &b);
+//	cout << a << "\t" << b << endl;
+//}
+//void Exchange(int* a, int* b)
+//{
+//	int buffer = *a;
+//	*a = *b;
+//	*b = buffer;
+//}
