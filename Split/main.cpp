@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
@@ -19,8 +19,8 @@ void main()
     Print(arr, n);
     Search(arr, a, b,n);
     
-    int* arr_even = new int[a]; // четные числа
-    int* arr_odd = new int[b]; // нечетные числа
+    int* arr_even = new int[a]; // С‡РµС‚РЅС‹Рµ С‡РёСЃР»Р°
+    int* arr_odd = new int[b]; // РЅРµС‡РµС‚РЅС‹Рµ С‡РёСЃР»Р°
     Split(arr, arr_even, arr_odd, n);
     Print(arr_even, a);
     Print(arr_odd, b);
@@ -37,7 +37,7 @@ void FillRand(int* arr, const int n)
     }
       cout << endl; 
 }
-void Search(int* arr, int& a, int& b, const int n) //поиск четных и нечетных чисел
+void Search(int* arr, int& a, int& b, const int n) //РїРѕРёСЃРє С‡РµС‚РЅС‹С… Рё РЅРµС‡РµС‚РЅС‹С… С‡РёСЃРµР»
 {
     for (int i = 0; i < n; i++)
     {
@@ -50,20 +50,20 @@ void Search(int* arr, int& a, int& b, const int n) //поиск четных и нечетных чис
             b++;
         }
     }
-    cout << " Четных элементов : " << a << endl;
-    cout << " Не четных элементов : " << b << endl;
+    cout << " Р§РµС‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ : " << a << endl;
+    cout << " РќРµ С‡РµС‚РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ : " << b << endl;
 }
 void Split(int* arr, int* arr_even, int* arr_odd, const int n)
 {
-    int с = 0, d = 0;
+    int СЃ = 0, d = 0;
     for (int i = 0; i < n; i++)
     {
-        if (arr[i] % 2 == 0) // отлавливаем четные и записываем их в новый массив
+        if (arr[i] % 2 == 0) // РѕС‚Р»Р°РІР»РёРІР°РµРј С‡РµС‚РЅС‹Рµ Рё Р·Р°РїРёСЃС‹РІР°РµРј РёС… РІ РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ
         {
-            arr_even[с] = arr[i];
-            с++;
+            arr_even[СЃ] = arr[i];
+            СЃ++;
         }
-        else                            // отлавливаем нечетные и записываем их в новый массив
+        else                            // РѕС‚Р»Р°РІР»РёРІР°РµРј РЅРµС‡РµС‚РЅС‹Рµ Рё Р·Р°РїРёСЃС‹РІР°РµРј РёС… РІ РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ
         {
             arr_odd[d] = arr[i];
             d++;
