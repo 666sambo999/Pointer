@@ -26,8 +26,8 @@ int** push_row_back(int** arr, int& rows, const int cols);
 int** push_row_front(int** arr, int& rows, const int cols); 
 int** Insert(int** arr, int& rows, const int cols, int index); 
 
-//int** pop_row_back(int** arr, int& rows, const int cols);
-//int** pop_row_front(int** arr, int& rows, const int cols); 
+int** pop_row_back(int** arr, int& rows, const int cols);
+int** pop_row_front(int** arr, int& rows, const int cols); 
 int** erase_row(int** arr, int& rows, const int cols, int in);
 
 void push_col_back(int** arr, const int rows, int& cols);
@@ -92,57 +92,57 @@ void main()
 	FillRand(arr, rows, cols);
 	Print(arr, rows, cols);
 	
-	/*cout << "Добавление строки в конец массва: " << endl; 
+	cout << "Добавление строки в конец массва: " << endl; 
 	arr = push_row_back(arr, rows, cols);
 	Print(arr, rows, cols);
 	
 	cout << "Добавление строки в начало массива: " << endl; 
 	arr = push_row_front(arr, rows, cols);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
-	/*int index; 
+	int index; 
 	cout << "Добавление строки по указанному индексу массива: "; cin >> index;
 	arr = Insert(arr, rows, cols, index);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
-	/*cout << "Удаление строки в конце массива: " << endl; 
+	cout << "Удаление строки в конце массива: " << endl; 
 	arr = pop_row_back(arr, rows, cols);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
-	//cout << "Удаление строки в начале массива: " << endl; 
-	//arr = pop_row_front(arr, rows, cols);
-	//Print(arr, rows, cols);
+	cout << "Удаление строки в начале массива: " << endl; 
+	arr = pop_row_front(arr, rows, cols);
+	Print(arr, rows, cols);
 
-	/*int in;
+	int in;
 	cout << "Введите индекс для удаления строки:"; cin >> in;
 	arr = erase_row(arr, rows, cols,in);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
-	/*cout << "Всталяем пустой столбец в конец массива: " << endl; 
+	cout << "Всталяем пустой столбец в конец массива: " << endl; 
 	push_col_back(arr, rows, cols);
 	Print(arr,rows, cols);
 
 	cout << "Всталяем пустой столбец в начало массива: " << endl; 
 	push_col_front(arr, rows, cols);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 	
 	int a;
 	cout << "Введите индекс для добавления столбика по индексу:"; cin >> a;
 	insert_col(arr, rows, cols, a);
 	Print(arr, rows, cols);
 	
-	/*cout << "Удаление столбца с конца массива: " << endl; 
+	cout << "Удаление столбца с конца массива: " << endl; 
 	pop_col_back(arr, rows, cols);
 	Print(arr, rows, cols);
 
 	cout << "Удаление столбца с начала массива: " << endl;
 	pop_col_front(arr, rows, cols);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
-	/*int b;
+	int b;
 	cout << "Введите индекс для удаления столбца по индексу:"; cin >> b;
 	erase_col(arr, rows, cols, b);
-	Print(arr, rows, cols);*/
+	Print(arr, rows, cols);
 
 	Clear(arr, rows);
 
@@ -340,6 +340,7 @@ int** Insert(int** arr, int& rows, const int cols, int index)
 	delete[] arr;
 	rows++;
 	return buffer;
+	// 2 вариант 
 	/*int** buffer = new int* [rows + 1] {};
 	for (int i = 0; i < rows; i++)buffer[i] = arr[i];
 	delete[] arr;
