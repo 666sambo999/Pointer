@@ -44,6 +44,9 @@ template <typename T>T** pop_row_back(T** arr, int& rows, const int cols)
 	delete[] arr;
 	rows--;
 	return buffer;*/
+
+	// delete [] arr [rows-1]; оптимизация работает благодаря шаблонизации функции. 
+	// return pop_back (arr,rows);
 }
 template <typename T>T** pop_row_front(T** arr, int& rows, const int cols)
 {

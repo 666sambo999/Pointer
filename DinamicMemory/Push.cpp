@@ -43,6 +43,8 @@ template <typename T>T* push_front(T arr[], int& n, int value)
 //}
 template <typename T>T** push_row_back(T** arr, int& rows, const int cols)
 {
+	//return push_back(arr, rows, new T[cols]{});
+	
 	//1) Перераспределяем массив указателей
 	T** buffer = new T * [rows + 1] {};
 	// 2) копируем адреса строк из исходного массива указателей в новый
